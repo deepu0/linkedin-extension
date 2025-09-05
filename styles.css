@@ -1,0 +1,27 @@
+.linkedin-exact-applicant-badge {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #0077B5;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 2147483647;
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: default;
+  display: none;
+}
+.linkedin-exact-applicant-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.20);
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.linkedin-exact-applicant-badge.updated { animation: pulse .5s ease-in-out; }
