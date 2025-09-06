@@ -3,7 +3,7 @@
   "name": "LinkedIn Exact Applicant Counter",
   "version": "1.1.0",
   "description": "Shows exact applicant count on LinkedIn job postings (opt-in per tab).",
-  "permissions": ["cookies", "storage", "activeTab", "scripting"],
+  "permissions": ["cookies"],
   "host_permissions": ["https://www.linkedin.com/*"],
   "background": {
     "service_worker": "service-worker.js",
@@ -12,6 +12,9 @@
   "action": {
     "default_title": "LinkedIn Exact Applicant Counter",
     "default_popup": "popup.html"
+  },
+   "icons": {
+    "128": "icon.png"
   },
   "content_scripts": [
     {
