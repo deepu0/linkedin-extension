@@ -93,22 +93,26 @@ function ensureBadge() {
 }
 
 function hideBadge() {
+  let fancyBadge = fitLevelDiv.querySelector('.li-applicant-fancy-badge');
+  if (fancyBadge) fancyBadge.style.display = 'none';
+
   const badge = document.getElementById('linkedin-exact-applicant-badge');
   if (badge) badge.style.display = 'none';
 }
 
 function updateUI(count) {
+  
   if (!enabled || typeof count !== 'number') return;
 
-  const badge = ensureBadge();
-  const prev = badge.textContent;
-  badge.textContent = `Exact applicants: ${count.toLocaleString()}`;
-  badge.style.display = 'block';
-  if (prev && prev !== badge.textContent) {
-    badge.classList.remove('updated'); // restart animation
-    void badge.offsetWidth;
-    badge.classList.add('updated');
-  }
+  // const badge = ensureBadge();
+  // const prev = badge.textContent;
+  // badge.textContent = `Exact applicants: ${count.toLocaleString()}`;
+  // badge.style.display = 'block';
+  // if (prev && prev !== badge.textContent) {
+  //   badge.classList.remove('updated'); // restart animation
+  //   void badge.offsetWidth;
+  //   badge.classList.add('updated');
+  // }
 
    const fitLevelDiv = document.querySelector('.job-details-fit-level-preferences');
   if (fitLevelDiv) {
